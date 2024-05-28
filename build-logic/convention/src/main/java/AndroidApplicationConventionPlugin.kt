@@ -1,4 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
+import com.perfecta.convention.ExtensionType
+import com.perfecta.convention.configureBuildTypes
 import com.perfecta.convention.configureKotlinAndroid
 import com.perfecta.convention.libs
 import org.gradle.api.Plugin
@@ -24,6 +26,11 @@ class AndroidApplicationConventionPlugin: Plugin<Project> {
                 }
 
                 configureKotlinAndroid(this)
+
+                configureBuildTypes(
+                    commonExtension = this,
+                    extensionType = ExtensionType.APPLICATION
+                )
             }
         }
     }
