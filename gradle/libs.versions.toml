@@ -116,13 +116,14 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 room = { id = "androidx.room", version.ref = "room" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
-mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
+mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin" }
 
 runique-android-application = { id = "runique.android.application", version = "unspecified" }
 runique-android-application-compose = { id = "runique.android.application.compose", version = "unspecified" }
 runique-android-library = { id = "runique.android.library", version = "unspecified" }
 runique-android-library-compose = { id = "runique.android.library.compose", version = "unspecified" }
 runique-android-feature-ui = { id = "runique.android.feature.ui", version = "unspecified" }
+runique-android-room = { id = "runique.android.room", version = "unspecified" }
 
 [bundles]
 compose = [
@@ -138,5 +139,14 @@ compose-debug = [
     "androidx-compose-ui-tooling",
     "androidx-compose-ui-test-manifest",
 ]
-koin = ["koin-core", "koin-android", "koin-android-workmanager"]
-koin-compose = ["koin-core", "koin-android", "koin-android-workmanager", "koin-androidx-compose"]
+koin = [
+    "koin-core",
+    "koin-android",
+    "koin-android-workmanager"
+]
+koin-compose = [
+    "koin-core",
+    "koin-android",
+    "koin-android-workmanager",
+    "koin-androidx-compose"
+]
