@@ -1,6 +1,7 @@
 package com.perfecta.core.presentation.ui
 
-import util.DataError
+import com.perfecta.core.domain.util.DataError
+
 
 fun DataError.asUiText(): UiText {
     return when(this) {

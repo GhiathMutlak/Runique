@@ -1,4 +1,4 @@
-package util
+package com.perfecta.core.domain.util
 
 sealed interface DataError: Error {
     enum class Network: DataError {
