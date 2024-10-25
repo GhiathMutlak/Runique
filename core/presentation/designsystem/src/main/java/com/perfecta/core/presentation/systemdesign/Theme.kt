@@ -7,12 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.perfecta.runique.core.systemdesign.RuniqueBlack
-import com.perfecta.runique.core.systemdesign.RuniqueDarkGray
-import com.perfecta.runique.core.systemdesign.RuniqueGray
-import com.perfecta.runique.core.systemdesign.RuniqueGreen
-import com.perfecta.runique.core.systemdesign.RuniqueGreen30
-import com.perfecta.runique.core.systemdesign.RuniqueWhite
 
 val DarkColorScheme = darkColorScheme(
     primary = RuniqueGreen,

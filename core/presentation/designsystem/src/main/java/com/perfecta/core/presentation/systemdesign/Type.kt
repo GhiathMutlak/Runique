@@ -7,8 +7,6 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.perfecta.runique.core.systemdesign.RuniqueGray
-import com.perfecta.runique.core.systemdesign.RuniqueWhite
 
 val Poppins = FontFamily(
     Font(

@@ -1,9 +1,8 @@
-package com.perfecta.runique.core.systemdesign
+package com.perfecta.core.presentation.systemdesign
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
-import com.perfecta.core.presentation.systemdesign.R
 
 val AnalyticsIcon: ImageVector
     @Composable

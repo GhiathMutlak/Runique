@@ -1,4 +1,4 @@
-package com.perfecta.runique.core.systemdesign
+package com.perfecta.core.presentation.systemdesign
 
 import androidx.compose.ui.graphics.Color
 
