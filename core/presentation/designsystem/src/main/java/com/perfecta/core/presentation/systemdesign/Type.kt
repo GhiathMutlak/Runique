@@ -62,6 +62,7 @@ val Typography = Typography(
         fontFamily = Poppins,
         fontWeight = FontWeight.SemiBold,
         fontSize = 24.sp,
-        color = RuniqueWhite
+        color = RuniqueWhite,
+        lineHeight = 4.sp
     ),
 )
