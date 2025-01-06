@@ -1,5 +1,7 @@
 @file:OptIn(ExperimentalFoundationApi::class)
 
+package com.perfecta.core.presentation.systemdesign.components
+
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

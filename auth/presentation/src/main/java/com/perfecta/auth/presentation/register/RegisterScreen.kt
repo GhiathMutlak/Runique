@@ -2,7 +2,6 @@
 
 package com.perfecta.auth.presentation.register
 
-import RuniquePasswordTextField
 import RuniqueTextField
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
@@ -43,6 +42,7 @@ import com.perfecta.core.presentation.systemdesign.RuniqueGreen
 import com.perfecta.core.presentation.systemdesign.RuniqueTheme
 import com.perfecta.core.presentation.systemdesign.components.GradientBackground
 import com.perfecta.core.presentation.systemdesign.components.RuniqueActionButton
+import com.perfecta.core.presentation.systemdesign.components.RuniquePasswordTextField
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -53,7 +53,14 @@ fun RegisterScreenRoot(
 ) {
     RegisterScreen(
         state = viewModel.state,
-        onAction = viewModel::onAction
+        onAction = { action ->
+            when (action) {
+                RegisterAction.OnLoginClick -> onSignInClick()
+                RegisterAction.OnRegisterClick -> {}//TODO()
+                RegisterAction.OnTogglePasswordVisibilityClick -> {}//TODO()
+            }
+        }
+        //onAction = viewModel::onAction
     )
 }
 
@@ -136,6 +143,7 @@ private fun RegisterScreen(
             Spacer(Modifier.height(32.dp))
 
             RuniquePasswordTextField(
+                state = state.password,
                 isPasswordVisible = state.isPasswordVisible,
                 onTogglePasswordVisibility = {
                     onAction(RegisterAction.OnTogglePasswordVisibilityClick)

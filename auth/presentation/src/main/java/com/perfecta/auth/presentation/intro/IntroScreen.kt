@@ -29,6 +29,7 @@ fun IntroScreenRoot(
     onSignUpClick: () -> Unit,
 ) {
     IntroScreen(
+        modifier = modifier,
         onAction = { introAction ->
             when (introAction) {
                 IntroAction.OnSignInClick -> onSignInClick()
@@ -45,7 +46,7 @@ fun IntroScreen(
 ) {
     GradientBackground {
         Box(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxWidth()
                 .weight(1f),
             contentAlignment = Alignment.Center
@@ -75,14 +76,14 @@ fun IntroScreen(
             Spacer(modifier = Modifier.height(32.dp))
 
             RuniqueOutlinedButton(
-                onClick = { /*TODO*/ },
+                onClick = { onAction(IntroAction.OnSignInClick) },
                 text = stringResource(id = R.string.sign_in)
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             RuniqueActionButton(
-                onClick = { /*TODO*/ },
+                onClick = { onAction(IntroAction.OnSignUpClick) },
                 text = stringResource(id = R.string.sign_up)
             )
         }
