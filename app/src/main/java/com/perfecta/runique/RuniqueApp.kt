@@ -3,6 +3,7 @@ package com.perfecta.runique
 import android.app.Application
 import com.perfecta.auth.data.di.authDataModule
 import com.perfecta.auth.presentation.di.authPresentationModule
+import com.perfecta.core.data.di.coreDataModule
 import com.perfecta.runique.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -25,7 +26,8 @@ class RuniqueApp : Application() {
             modules(
                 authDataModule,
                 authPresentationModule,
-                appModule
+                appModule,
+                coreDataModule
             )
 
         }
