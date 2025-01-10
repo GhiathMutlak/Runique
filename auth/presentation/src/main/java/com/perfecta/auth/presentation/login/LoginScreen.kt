@@ -12,9 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -93,7 +91,6 @@ private fun LoginScreen(
     GradientBackground {
         Column(
             modifier = Modifier
-                .verticalScroll(rememberScrollState())
                 .fillMaxSize()
                 .padding(horizontal = 16.dp)
                 .padding(vertical = 32.dp)
@@ -140,10 +137,10 @@ private fun LoginScreen(
             RuniqueActionButton(
                 text = stringResource(id = R.string.login),
                 isLoading = state.isLoggingIn,
-                isEnabled = state.canLogIn,
+                isEnabled = state.canLogIn && !state.isLoggingIn,
                 onClick = {
                     onAction(LoginAction.OnLoginClick)
-                },
+                }
             )
 
             val annotatedString = buildAnnotatedString {
@@ -172,8 +169,8 @@ private fun LoginScreen(
 
             Box(
                 modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .weight(1f),
+                    .weight(1f)
+                    .align(Alignment.CenterHorizontally),
                 contentAlignment = Alignment.BottomCenter
             ) {
                 ClickableText(
