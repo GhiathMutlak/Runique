@@ -40,7 +40,6 @@ import com.perfecta.core.presentation.systemdesign.CrossIcon
 import com.perfecta.core.presentation.systemdesign.EmailIcon
 import com.perfecta.core.presentation.systemdesign.Poppins
 import com.perfecta.core.presentation.systemdesign.RuniqueDarkRed
-import com.perfecta.core.presentation.systemdesign.RuniqueGray
 import com.perfecta.core.presentation.systemdesign.RuniqueGreen
 import com.perfecta.core.presentation.systemdesign.RuniqueTheme
 import com.perfecta.core.presentation.systemdesign.components.GradientBackground
@@ -83,7 +82,13 @@ fun RegisterScreenRoot(
 
     RegisterScreen(
         state = viewModel.state,
-        onAction = viewModel::onAction
+        onAction = { action ->
+            when (action) {
+                RegisterAction.OnLoginClick -> onSignInClick
+                else -> {}
+            }
+            viewModel.onAction(action)
+        }
     )
 }
 
@@ -111,7 +116,7 @@ private fun RegisterScreen(
                 withStyle(
                     style = SpanStyle(
                         fontFamily = Poppins,
-                        color = RuniqueGray
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
                     append(stringResource(R.string.already_have_an_account) + " ")
