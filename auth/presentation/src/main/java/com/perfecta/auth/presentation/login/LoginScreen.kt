@@ -29,12 +29,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.perfecta.auth.presentation.R
-import com.perfecta.core.presentation.systemdesign.EmailIcon
-import com.perfecta.core.presentation.systemdesign.Poppins
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
-import com.perfecta.core.presentation.systemdesign.components.GradientBackground
-import com.perfecta.core.presentation.systemdesign.components.RuniqueActionButton
-import com.perfecta.core.presentation.systemdesign.components.RuniquePasswordTextField
+import com.perfecta.core.presentation.designsystem.EmailIcon
+import com.perfecta.core.presentation.designsystem.Poppins
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.components.GradientBackground
+import com.perfecta.core.presentation.designsystem.components.RuniqueActionButton
+import com.perfecta.core.presentation.designsystem.components.RuniquePasswordTextField
 import com.perfecta.core.presentation.ui.ObserveAsEvents
 import org.koin.androidx.compose.koinViewModel
 

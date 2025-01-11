@@ -1,4 +1,4 @@
-package com.perfecta.core.presentation.systemdesign.components
+package com.perfecta.core.presentation.designsystem.components
 
 import android.os.Build
 import androidx.compose.foundation.background
@@ -17,7 +17,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
 
 @Composable
 fun GradientBackground(

@@ -16,11 +16,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.perfecta.auth.presentation.R
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
-import com.perfecta.core.presentation.systemdesign.Typography
-import com.perfecta.core.presentation.systemdesign.components.GradientBackground
-import com.perfecta.core.presentation.systemdesign.components.RuniqueActionButton
-import com.perfecta.core.presentation.systemdesign.components.RuniqueOutlinedButton
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.Typography
+import com.perfecta.core.presentation.designsystem.components.GradientBackground
+import com.perfecta.core.presentation.designsystem.components.RuniqueActionButton
+import com.perfecta.core.presentation.designsystem.components.RuniqueOutlinedButton
 
 @Composable
 fun IntroScreenRoot(

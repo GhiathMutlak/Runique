@@ -15,8 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.perfecta.auth.presentation.R
-import com.perfecta.core.presentation.systemdesign.LogoIcon
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.LogoIcon
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
 
 @Composable
 fun RuniqueLogoVertical(

@@ -37,9 +37,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.perfecta.core.presentation.systemdesign.CheckIcon
-import com.perfecta.core.presentation.systemdesign.EmailIcon
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.CheckIcon
+import com.perfecta.core.presentation.designsystem.EmailIcon
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
 
 @Composable
 fun RuniqueTextField(

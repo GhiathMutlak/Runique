@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalFoundationApi::class)
 
-package com.perfecta.core.presentation.systemdesign.components
+package com.perfecta.core.presentation.designsystem.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -37,10 +37,10 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.perfecta.core.presentation.systemdesign.EyeClosedIcon
-import com.perfecta.core.presentation.systemdesign.EyeOpenedIcon
-import com.perfecta.core.presentation.systemdesign.LockIcon
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.EyeClosedIcon
+import com.perfecta.core.presentation.designsystem.EyeOpenedIcon
+import com.perfecta.core.presentation.designsystem.LockIcon
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
 
 @Composable
 fun RuniquePasswordTextField(

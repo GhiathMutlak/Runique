@@ -1,6 +1,5 @@
-package com.perfecta.core.presentation.systemdesign.components
+package com.perfecta.core.presentation.designsystem.components
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,12 +19,12 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.perfecta.core.presentation.systemdesign.RuniqueBlack
-import com.perfecta.core.presentation.systemdesign.RuniqueGray
-import com.perfecta.core.presentation.systemdesign.RuniqueTheme
+import com.perfecta.core.presentation.designsystem.RuniqueBlack
+import com.perfecta.core.presentation.designsystem.RuniqueGray
+import com.perfecta.core.presentation.designsystem.RuniqueTheme
 
 @Composable
-fun RuniqueOutlinedButton(
+fun RuniqueActionButton(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
     text: String,
@@ -40,13 +39,12 @@ fun RuniqueOutlinedButton(
         onClick = onClick,
         enabled = isEnabled,
         colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.background,
+            containerColor = MaterialTheme.colorScheme.primary,
             contentColor = MaterialTheme.colorScheme.onBackground,
             disabledContainerColor = RuniqueGray,
             disabledContentColor = RuniqueBlack
         ),
-        shape = RoundedCornerShape(100f),
-        border = BorderStroke(width = 0.5.dp, color = MaterialTheme.colorScheme.onBackground)
+        shape = RoundedCornerShape(100f)
     ) {
         Box(
             modifier = Modifier
@@ -58,14 +56,14 @@ fun RuniqueOutlinedButton(
                     .size(15.dp)
                     .alpha(if (isLoading) 1f else 0f),
                 strokeWidth = 1.5.dp,
-                color = MaterialTheme.colorScheme.onBackground
+                color = MaterialTheme.colorScheme.onPrimary
             )
 
             Text(
                 modifier = Modifier.alpha(if (isLoading) 0f else 1f),
                 text = text,
                 fontWeight = FontWeight.Medium,
-                color = MaterialTheme.colorScheme.onBackground
+                color = MaterialTheme.colorScheme.background
             )
         }
     }
@@ -74,8 +72,8 @@ fun RuniqueOutlinedButton(
 
 @Preview
 @Composable
-private fun RuniqueOutlinedButtonPreview() {
+private fun RuniqueActionButtonPreview() {
     RuniqueTheme {
-        RuniqueOutlinedButton(onClick = { /*TODO*/ }, text = "Sign up")
+        RuniqueActionButton(onClick = { /*TODO*/ }, text = "Sign up")
     }
 }

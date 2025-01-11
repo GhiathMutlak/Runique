@@ -1,4 +1,4 @@
-package com.perfecta.core.presentation.systemdesign
+package com.perfecta.core.presentation.designsystem
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
