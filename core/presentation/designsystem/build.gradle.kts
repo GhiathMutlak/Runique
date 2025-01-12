@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.perfecta.core.presentation.systemdesign"
+    namespace = "com.perfecta.core.presentation.designsystem"
 }
 
 dependencies {
