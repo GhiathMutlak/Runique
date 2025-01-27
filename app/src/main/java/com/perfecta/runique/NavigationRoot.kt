@@ -9,6 +9,7 @@ import androidx.navigation.navigation
 import com.perfecta.auth.presentation.intro.IntroScreenRoot
 import com.perfecta.auth.presentation.login.LoginScreenRoot
 import com.perfecta.auth.presentation.register.RegisterScreenRoot
+import com.perfecta.run.presentation.active_run.ActiveRunScreenRoot
 import com.perfecta.run.presentation.run_overview.RunOverviewScreenRoot
 
 
@@ -88,7 +89,15 @@ private fun NavGraphBuilder.runGraph(navController: NavHostController) {
         route = "run"
     ) {
         composable(route = "run_overview") {
-            RunOverviewScreenRoot()
+            RunOverviewScreenRoot(
+                onStartRunClick = {
+                    navController.navigate("active_run")
+                }
+            )
+        }
+
+        composable(route = "active_run") {
+            ActiveRunScreenRoot()
         }
     }
 }
