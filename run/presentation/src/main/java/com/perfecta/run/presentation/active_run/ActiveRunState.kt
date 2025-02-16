@@ -1,6 +1,6 @@
 package com.perfecta.run.presentation.active_run
 
-import com.perfecta.core.domain.util.location.Location
+import com.perfecta.core.domain.location.Location
 import com.perfecta.run.domain.RunData
 import kotlin.time.Duration
 

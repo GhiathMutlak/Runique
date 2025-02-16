@@ -12,7 +12,7 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
-import com.perfecta.core.domain.util.location.LocationWithAltitude
+import com.perfecta.core.domain.location.LocationWithAltitude
 import com.perfecta.run.domain.LocationObserver
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay

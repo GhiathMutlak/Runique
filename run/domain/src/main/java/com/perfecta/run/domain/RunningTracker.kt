@@ -3,7 +3,7 @@
 package com.perfecta.run.domain
 
 import com.perfecta.core.domain.Timer
-import com.perfecta.core.domain.util.location.LocationTimestamp
+import com.perfecta.core.domain.location.LocationTimestamp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,4 +1,4 @@
-package com.perfecta.core.domain.util.location
+package com.perfecta.core.domain.location
 
 import java.lang.Math
 import kotlin.math.atan2

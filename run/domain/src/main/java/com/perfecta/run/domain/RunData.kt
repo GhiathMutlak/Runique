@@ -1,6 +1,6 @@
 package com.perfecta.run.domain
 
-import com.perfecta.core.domain.util.location.LocationTimestamp
+import com.perfecta.core.domain.location.LocationTimestamp
 import kotlin.time.Duration
 
 data class RunData(
