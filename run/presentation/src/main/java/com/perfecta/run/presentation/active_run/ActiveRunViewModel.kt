@@ -122,8 +122,6 @@ class ActiveRunViewModel(private val runningTracker: RunningTracker) : ViewModel
                     showLocationRationale = false
                 )
             }
-
-            else -> Unit
         }
     }
 
