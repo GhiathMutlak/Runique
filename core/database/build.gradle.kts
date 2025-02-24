@@ -12,6 +12,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    implementation(libs.bundles.koin)
     implementation(libs.org.mongodb.bson)
 
     testImplementation(libs.junit)

@@ -4,6 +4,7 @@ import android.app.Application
 import com.perfecta.auth.data.di.authDataModule
 import com.perfecta.auth.presentation.di.authPresentationModule
 import com.perfecta.core.data.di.coreDataModule
+import com.perfecta.core.database.di.databaseModule
 import com.perfecta.run.location.di.locationModule
 import com.perfecta.run.presentation.di.runPresentationModule
 import com.perfecta.runique.di.appModule
@@ -35,7 +36,8 @@ class RuniqueApp : Application() {
                 authPresentationModule,
                 coreDataModule,
                 runPresentationModule,
-                locationModule
+                locationModule,
+                databaseModule
             )
 
         }
