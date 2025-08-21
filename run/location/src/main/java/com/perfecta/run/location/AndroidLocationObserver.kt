@@ -52,9 +52,13 @@ class AndroidLocationObserver(
             ) {
                 close()
             } else {
-                locationProviderClient.lastLocation.addOnSuccessListener {
-                    trySend(it.toLocationWithAltitude())
-                }
+                try {
+                    locationProviderClient.lastLocation.addOnSuccessListener {
+                        try {
+                            trySend(it.toLocationWithAltitude())
+                        } catch (_: NullPointerException) {}
+                    }
+                } catch (_: NullPointerException) {}
 
                 val request =
                     LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, intervalMillis)

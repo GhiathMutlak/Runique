@@ -3,11 +3,12 @@
 package com.perfecta.auth.presentation.login
 
 
+import android.R.attr.password
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.text2.input.textAsFlow
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.perfecta.auth.domain.AuthRepository
@@ -35,7 +36,10 @@ class LoginViewModel(
     val events = eventChannel.receiveAsFlow()
 
     init {
-        combine(state.email.textAsFlow(), state.password.textAsFlow()) { email, password ->
+        val emailFlow = snapshotFlow { state.email.text }
+        val passwordFlow = snapshotFlow { state.password.text }
+
+        combine(emailFlow, passwordFlow) { email, password ->
             state = state.copy(
                 canLogIn = validator.isValidEmail(email.toString().trim()) && password.isNotEmpty()
             )

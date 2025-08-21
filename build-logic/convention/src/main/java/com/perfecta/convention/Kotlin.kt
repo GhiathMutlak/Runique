@@ -19,12 +19,10 @@ internal fun Project.configureKotlinAndroid(
 
         compileOptions {
             isCoreLibraryDesugaringEnabled = true
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
+            sourceCompatibility = JavaVersion.VERSION_21
+            targetCompatibility = JavaVersion.VERSION_21
         }
     }
-
-    configureKotlin()
 
     dependencies {
         "coreLibraryDesugaring"(libs.findLibrary("desugar.jdk.libs").get())
@@ -33,16 +31,7 @@ internal fun Project.configureKotlinAndroid(
 
 internal fun Project.configureKotlinJvm() {
     extensions.configure<JavaPluginExtension> {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    configureKotlin()
-}
-
-private fun Project.configureKotlin() {
-    tasks.withType<KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
-        }
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }

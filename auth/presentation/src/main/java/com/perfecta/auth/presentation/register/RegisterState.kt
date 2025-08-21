@@ -3,7 +3,7 @@
 package com.perfecta.auth.presentation.register
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.text2.input.TextFieldState
+import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.runtime.Immutable
 import com.perfecta.auth.domain.PasswordValidationState
 
