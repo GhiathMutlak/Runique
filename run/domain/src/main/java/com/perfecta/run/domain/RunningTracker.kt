@@ -9,6 +9,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.combineTransform
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.flatMapLatest
@@ -80,7 +81,7 @@ class RunningTracker(
                     emit(location)
                 }
             }
-            .zip(_elapsedTime) { location, elapsedTime ->
+            .combine(_elapsedTime) { location, elapsedTime ->
                 LocationTimestamp(
                     location = location,
                     durationTimestamp = elapsedTime
@@ -128,6 +129,13 @@ class RunningTracker(
 
     fun stopObservingLocation() {
         isObservingLocation.value = false
+    }
+
+    fun finishRun() {
+        stopObservingLocation()
+        setIsTracking(false)
+        _elapsedTime.value = Duration.ZERO
+        _runData.value = RunData()
     }
 
 }
