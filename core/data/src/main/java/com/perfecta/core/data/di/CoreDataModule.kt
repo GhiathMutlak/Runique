@@ -2,6 +2,8 @@ package com.perfecta.core.data.di
 
 import com.perfecta.core.data.auth.EncryptedSessionStorage
 import com.perfecta.core.data.networking.HttpClientFactory
+import com.perfecta.core.data.run.OfflineFirstRunRepository
+import com.perfecta.core.domain.run.RunRepository
 import com.perfecta.core.domain.util.SessionStorage
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
@@ -13,4 +15,6 @@ val coreDataModule = module {
     }
 
     singleOf(::EncryptedSessionStorage).bind<SessionStorage>()
+
+    singleOf(::OfflineFirstRunRepository).bind<RunRepository>()
 }

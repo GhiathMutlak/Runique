@@ -6,6 +6,7 @@ import com.perfecta.auth.presentation.di.authPresentationModule
 import com.perfecta.core.data.di.coreDataModule
 import com.perfecta.core.database.di.databaseModule
 import com.perfecta.run.location.di.locationModule
+import com.perfecta.run.network.di.networkModule
 import com.perfecta.run.presentation.di.runPresentationModule
 import com.perfecta.runique.di.appModule
 import kotlinx.coroutines.CoroutineScope
@@ -37,7 +38,8 @@ class RuniqueApp : Application() {
                 coreDataModule,
                 runPresentationModule,
                 locationModule,
-                databaseModule
+                databaseModule,
+                networkModule
             )
 
         }

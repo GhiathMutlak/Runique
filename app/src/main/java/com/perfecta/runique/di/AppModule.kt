@@ -7,7 +7,7 @@ import com.perfecta.runique.MainViewModel
 import com.perfecta.runique.RuniqueApp
 import kotlinx.coroutines.CoroutineScope
 import org.koin.android.ext.koin.androidApplication
-import org.koin.androidx.viewmodel.dsl.viewModelOf
+import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
 val appModule = module {

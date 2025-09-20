@@ -8,8 +8,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.perfecta.core.domain.location.Location
 import com.perfecta.core.domain.run.Run
+import com.perfecta.core.domain.run.RunRepository
 import com.perfecta.run.domain.LocationDataCalculator
 import com.perfecta.run.domain.RunningTracker
+import com.perfecta.core.domain.util.Result
+import com.perfecta.core.presentation.ui.asUiText
 import com.perfecta.run.presentation.active_run.services.ActiveRunService
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -24,7 +27,10 @@ import java.time.ZoneId
 import java.time.ZonedDateTime
 
 
-class ActiveRunViewModel(private val runningTracker: RunningTracker) : ViewModel() {
+class ActiveRunViewModel(
+    private val runningTracker: RunningTracker,
+    private val runRepository: RunRepository
+) : ViewModel() {
 
     var state by mutableStateOf(
         ActiveRunState(
@@ -158,9 +164,17 @@ class ActiveRunViewModel(private val runningTracker: RunningTracker) : ViewModel
                 mapPictureUrl = null
             )
 
-            // Save run in repository
-
             runningTracker.finishRun()
+
+            when(val result = runRepository.upsertRun(run, mapPictureBytes)) {
+                is Result.Error -> {
+                    eventChannel.send(ActiveRunEvent.Error(result.error.asUiText()))
+                }
+                is Result.Success -> {
+                    eventChannel.send(ActiveRunEvent.RunSaved)
+                }
+            }
+
             state = state.copy(isSavingRun = false)
         }
     }
